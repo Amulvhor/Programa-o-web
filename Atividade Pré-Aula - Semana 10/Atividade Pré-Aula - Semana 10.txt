@@ -1,0 +1,12 @@
+Curso de Engenharia de Software - UniEVANGÉLICA
+Disciplina de Programação Web
+Dev: João Lucas Maciel Martins
+DATA: 21/05/2023
+
+A utilização do JavaScript no backend é possível graças a plataformas e frameworks como o Node.js, que é um ambiente de execução do JavaScript fora do navegador. O Node.js permite que os desenvolvedores utilizem o JavaScript para escrever aplicativos de servidor altamente escaláveis e eficientes.
+
+Com o Node.js, é possível criar servidores web completos, lidar com solicitações HTTP, acessar bancos de dados, gerenciar arquivos e executar muitas outras tarefas típicas do lado do servidor. O Node.js possui um modelo de programação orientado a eventos e utiliza uma arquitetura assíncrona, o que o torna particularmente adequado para aplicações em tempo real e de alto desempenho.
+
+Além do Node.js, existem também vários frameworks web populares que permitem construir aplicações de backend robustas usando JavaScript. Alguns exemplos incluem o Express.js, que é um framework minimalista e flexível para criação de APIs e aplicativos web, o Nest.js, que é um framework mais estruturado e baseado em TypeScript, e o Koa.js, que é um framework mais moderno e focado em middleware.
+
+Com essas ferramentas e frameworks, é possível criar um ecossistema completo de desenvolvimento em JavaScript, tanto no lado do cliente quanto no lado do servidor. Isso oferece benefícios significativos, como o compartilhamento de código entre o frontend e o backend, o que pode aumentar a produtividade e facilitar a manutenção do código.

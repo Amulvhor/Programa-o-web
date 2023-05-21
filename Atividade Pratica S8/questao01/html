@@ -1,0 +1,70 @@
+Curso de Engenharia de Software - UniEVANGÉLICA 
+Disciplina de Programação Web 
+Dev: João Lucas Maciel Martins
+DATA: 21/05/2023
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<h1 class="display-4">Formulário de Pesquisa</h1>
+    <form>
+        <label for="nome">Seu nome:</label>
+        <input type="text" id="nome" name="nome">
+        
+        <label for="pais">País:</label>
+        <select id="pais" name="pais">
+        <option value="brasil">Brasil</option>
+        <option value="argentina">Argentina</option>
+        <option value="estados-unidos">Estados Unidos</option>
+        <option value="grecia">Grécia</option>
+        </select>
+        
+        <label for="ativo">Ativo:</label>
+        <input type="checkbox" id="ativo" name="ativo">
+        
+        <button type="submit">Enviar</button>
+    </form>
+  
+
+<h1 class="display-4">Tabela</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>João</td>
+        <td>25</td>
+      </tr>
+      <tr>
+        <td>Maria</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>Pedro</td>
+        <td>22</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in risus et risus vulputate aliquam. Nullam molestie, sem vel fringilla dignissim, mi magna eleifend dolor, eget vestibulum lacus purus at lectus. Sed euismod vel velit ut fringilla. Donec auctor ex vel augue porttitor, eget iaculis odio pellentesque. Integer interdum lorem a enim aliquam, non volutpat nibh sagittis. Nam sed efficitur dolor, id ultrices quam. Aliquam eu quam vel dolor rhoncus eleifend. Donec eget ipsum nisi. Suspendisse potenti. Aenean a faucibus quam. Aenean eget facilisis odio. </p>
+  
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+  
+  <a href="#">Link</a>
+
+<html>

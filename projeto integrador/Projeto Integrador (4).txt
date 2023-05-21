@@ -1,0 +1,110 @@
+Curso de Engenharia de Software - UniEVANGÉLICA 
+Disciplina de Programação Web
+Projeto: Locação de automóveis
+Devs: Gabryel Alves Verne, João Lucas, Lucas Moraes, Mateus Leal, Renan Matos 
+DATA: 21/05/2023
+
+
+
+
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
+# Exemplo de banco de dados em memória para armazenar os automóveis
+automoveis = [
+    {
+        'id': 1,
+        'marca': 'Toyota',
+        'modelo': 'Corolla',
+        'ano': 2021,
+        'disponivel': True
+    },
+    {
+        'id': 2,
+        'marca': 'Honda',
+        'modelo': 'Civic',
+        'ano': 2020,
+        'disponivel': True
+    }
+]
+
+# Rotas para CRUD de automóveis
+
+# Obter todos os automóveis
+@app.route('/automoveis', methods=['GET'])
+def get_automoveis():
+    return jsonify(automoveis)
+
+# Obter um automóvel específico
+@app.route('/automoveis/<int:id>', methods=['GET'])
+def get_automovel(id):
+    automovel = next((automovel for automovel in automoveis if automovel['id'] == id), None)
+    if automovel:
+        return jsonify(automovel)
+    else:
+        return jsonify({'mensagem': 'Automóvel não encontrado'}), 404
+
+# Criar um novo automóvel
+@app.route('/automoveis', methods=['POST'])
+def create_automovel():
+    novo_automovel = {
+        'id': automoveis[-1]['id'] + 1,
+        'marca': request.json['marca'],
+        'modelo': request.json['modelo'],
+        'ano': request.json['ano'],
+        'disponivel': True
+    }
+    automoveis.append(novo_automovel)
+    return jsonify(novo_automovel), 201
+
+# Atualizar um automóvel existente
+@app.route('/automoveis/<int:id>', methods=['PUT'])
+def update_automovel(id):
+    automovel = next((automovel for automovel in automoveis if automovel['id'] == id), None)
+    if automovel:
+        automovel['marca'] = request.json['marca']
+        automovel['modelo'] = request.json['modelo']
+        automovel['ano'] = request.json['ano']
+        return jsonify(automovel)
+    else:
+        return jsonify({'mensagem': 'Automóvel não encontrado'}), 404
+
+# Deletar um automóvel
+@app.route('/automoveis/<int:id>', methods=['DELETE'])
+def delete_automovel(id):
+    automovel = next((automovel for automovel in automoveis if automovel['id'] == id), None)
+    if automovel:
+        automoveis.remove(automovel)
+        return jsonify({'mensagem': 'Automóvel deletado'})
+    else:
+        return jsonify({'mensagem': 'Automóvel não encontrado'}), 404
+
+# Regras de Negócio
+
+# Marcar um automóvel como alugado
+@app.route('/automoveis/<int:id>/alugar', methods=['PUT'])
+def alugar_automovel(id):
+    automovel = next((automovel for automovel in automoveis if automovel['id'] == id), None)
+    if automovel:
+        if automovel['disponivel']:
+            automovel['disponivel'] = False
+            return jsonify({'mensagem': 'Automóvel alugado'})
+        else:
+        return jsonify({'mensagem': 'Automóvel indisponível para aluguel'}), 400
+else:
+    return jsonify({'mensagem': 'Automóvel não encontrado'}), 404
+    @app.route('/automoveis/int:id/devolver', methods=['PUT'])
+def devolver_automovel(id):
+automovel = next((automovel for automovel in automoveis if automovel['id'] == id), None)
+if automovel:
+if not automovel['disponivel']:
+automovel['disponivel'] = True
+return jsonify({'mensagem': 'Automóvel devolvido'})
+else:
+return jsonify({'mensagem': 'Automóvel já está disponível'}), 400
+else:
+return jsonify({'mensagem': 'Automóvel não encontrado'}), 404
+
+if name == 'main':
+app.run()

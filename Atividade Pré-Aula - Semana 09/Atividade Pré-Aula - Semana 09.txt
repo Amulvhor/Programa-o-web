@@ -1,0 +1,12 @@
+Curso de Engenharia de Software - UniEVANGÉLICA 
+Disciplina de Programação Web 
+Dev: João Lucas Maciel Martins
+DATA: 21/05/2023
+                                Atividade Pré-Aula - Semana 09
+
+
+Frontend: O frontend é a parte do jogo que os jogadores interagem diretamente. É a interface visual e interativa que permite aos jogadores explorarem o mundo do jogo, controlar o personagem principal, visualizar gráficos impressionantes e interagir com elementos do jogo, como puzzles e inimigos. No contexto da aplicação web, o frontend seria a camada responsável pela apresentação e interação com o usuário. Seria como a parte do jogo que você vê na tela enquanto joga.
+
+Backend: O backend é a parte invisível do jogo que cuida de toda a lógica e processamento por trás dos panos. Ele gerencia coisas como a IA dos inimigos, a física do jogo, a geração de eventos e a persistência de dados. No contexto da aplicação web, o backend seria responsável por lidar com a lógica do aplicativo, processamento de dados, autenticação de usuários, acesso a bancos de dados e integração de sistemas. É como a "inteligência" do jogo que mantém tudo funcionando sem que o jogador precise se preocupar com os detalhes.
+
+API REST: A API REST (Representational State Transfer) pode ser comparada a um conjunto de missões opcionais disponíveis para os jogadores. Ela fornece uma maneira de se comunicar com o backend e obter informações ou realizar ações específicas no jogo. Por exemplo, os jogadores podem acessar uma API para receber missões secundárias, obter informações sobre o progresso do jogo ou enviar pontuações para um placar online. No contexto da aplicação web, uma API REST seria um conjunto de endpoints e métodos que permitem que o frontend se comunique com o backend, enviando solicitações para obter ou atualizar dados.

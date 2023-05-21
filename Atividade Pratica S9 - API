@@ -1,0 +1,39 @@
+Curso de Engenharia de Software - UniEVANGÉLICA 
+Disciplina de Programação Web 
+Dev:João Lucas Maciel Martins 
+DATA: 21/05/2023
+
+
+Recuperar a lista de personagens:
+GET /api/characters
+
+Criar um novo personagem:
+POST /api/characters
+
+Recuperar informações de um personagem específico por ID:
+GET /api/characters/{character_id}
+
+Atualizar informações de um personagem específico por ID:
+PUT /api/characters/{character_id}
+
+Excluir um personagem específico por ID:
+DELETE /api/characters/{character_id}
+
+Você pode adaptar e adicionar mais detalhes a esses endpoints de acordo com as necessidades do seu projeto. Por exemplo, é possível incluir parâmetros de consulta para filtrar a lista de personagens ou adicionar campos específicos ao criar ou atualizar um personagem.
+
+Além desses endpoints básicos, você pode considerar a inclusão de outras funcionalidades, como:
+
+Recuperar as estatísticas de um personagem:
+GET /api/characters/{character_id}/stats
+
+Recuperar os itens equipados de um personagem:
+GET /api/characters/{character_id}/equipment
+
+Adicionar um item ao inventário de um personagem:
+POST /api/characters/{character_id}/inventory
+
+Recuperar a lista de amigos de um personagem:
+GET /api/characters/{character_id}/friends
+
+Criar uma nova amizade entre personagens:
+POST /api/characters/{character_id}/friends
